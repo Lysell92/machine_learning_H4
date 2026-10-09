@@ -19,6 +19,11 @@ The agent observes the robot, package, and delivery locations, as well as whethe
 
 The objective is to pick up the package, deliver it successfully, avoid the trap, and complete the task before reaching the step threshold.
 
+https://gymnasium.farama.org/tutorials/gymnasium_basics/environment_creation/
+
+A big part of the inspiration for the project is based on this link, and the instructions provided by gymnasium. 
+As can be seen by my grid, which is entirely copied by the game of GridWorldEnv that can be viewed in the link.
+
 ## Technologies
 
 - Python
@@ -100,11 +105,13 @@ The current reward settings are configurable and have been adjusted experimental
 
 | Event | Reward |
 |---|---:|
-| Ordinary step | -0.1 |
+| Ordinary step | -0.07 |
 | Package pickup | +10 |
-| Successful delivery | +25 |
-| Trap collision | -6 or -10 |
-| Step threshold reached | -10 |
+| Successful delivery | +33 |
+| Trap collision | -10 |
+| Step threshold reached | -7 |
+
+
 
 These are experimental values, not a finalized or optimized reward function.
 

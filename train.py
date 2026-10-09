@@ -13,12 +13,12 @@ q_learning = QLearning(
     env=env,
     learning_rate = 0.1,
     initial_epsilon = 1,
-    epsilon_decay = 0.001,
+    epsilon_decay = 0.0005,
     final_epsilon = 0.05,
     discount_factor = 0.95,
 )
 
-episodes = 1000
+episodes = 10000
 
 successful_deliveries = 0
 trap_deaths = 0

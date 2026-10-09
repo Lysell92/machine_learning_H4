@@ -15,7 +15,7 @@ class Actions(Enum):
 class GridWorldEnv(gym.Env):
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
 
-    def __init__(self, render_mode=None, size=6, step_threshold=90):
+    def __init__(self, render_mode=None, size=6, step_threshold=100):
         self.size = size  # The size of the square grid
         self.window_size = 512  # The size of the PyGame window
         self.has_package = False
@@ -140,8 +140,7 @@ class GridWorldEnv(gym.Env):
         return observation, info
 
     def step(self, action):
-        
-        
+                
         terminated = False
         
         # Rewards
@@ -149,8 +148,8 @@ class GridWorldEnv(gym.Env):
         step_penalty = -0.07
         pickup_reward = 10
         delivery_reward = 33
-        step_threshold_reached = -8
-        trap = -8
+        step_threshold_reached = -7
+        trap = -10
 
         # Step count and penalizing
         self._step_count += 1
